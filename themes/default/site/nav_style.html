@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs">
+	<li{if $action == 'style' && empty($do)} class="active"{/if}><a href="{php echo create_url('site/style');}">风格管理</a></li>
+	{if $do == 'designer'}<li class="active"><a href="{php echo create_url('site/nav/post');}">设计风格</a></li>{/if}
+</ul>

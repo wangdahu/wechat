@@ -1,0 +1,29 @@
+{template 'mobile/header'}
+<div class="box">
+	{if $navs}
+	{loop $navs $nav}
+	<a href="{$nav['url']}" class="box-item">
+		{if !empty($nav['icon'])}
+		<i style="background:url({$_W['attachurl']}{$nav['icon']}) no-repeat;background-size:cover;"></i>
+		{else}
+		<i class="{$nav['css']['icon']['icon']}" style="{$nav['css']['icon']['style']}"></i>
+		{/if}
+		<span style="{$nav['css']['name']}">{$nav['name']}</span>
+	</a>
+	{/loop}
+	{else}
+	<a href="http://www.we7.cc" class="box-item">
+		<i class="icon-home"></i>
+		<span style="{$nav['css']['name']}">微擎</span>
+	</a>
+	<a href="http://bbs.we7.cc" class="box-item">
+		<i class="icon-comment"></i>
+		<span style="{$nav['css']['name']}">论坛</span>
+	</a>
+	<a href="mobile.php?act=channel&name=home&weid={$_W['weid']}" class="box-item">
+		<i class="icon-user"></i>
+		<span style="{$nav['css']['name']}">个人中心</span>
+	</a>
+	{/if}
+</div>
+{template 'mobile/footer'}

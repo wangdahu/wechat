@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs">
+	<li{if $action == 'nav' && empty($do)} class="active"{/if}><a href="{php echo create_url('site/nav');}">导航管理</a></li>
+	<li {if $action == 'nav' && $do == 'post'} class="active"{/if}><a href="{php echo create_url('site/nav/post');}">{if $id}更新导航{else}添加导航{/if}</a></li>
+</ul>

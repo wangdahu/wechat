@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{$title} -  Powered by WE7.CC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="微擎,微信,微信公众平台" />
+	<meta name="description" content="微信公众平台自助引擎，简称微擎，微擎是一款免费开源的微信公众平台管理系统。" />
+	<link type="text/css" rel="stylesheet" href="./resource/style/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="./resource/style/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="./resource/style/common.mobile.css">
+	<script type="text/javascript" src="./resource/script/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./resource/script/bootstrap.js"></script>
+	<script type="text/javascript" src="./resource/script/cascade.js"></script>
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="./resource/style/font-awesome-ie7.min.css">
+	<![endif]-->
+	<style>
+	body{ font: {$_W['styles']['fontsize']} {$_W['styles']['fontfamily']}; color: {$_W['styles']['fontcolor']}; }
+	body{padding:0;margin:0;padding-bottom:40px;}
+	a { color: {$_W['styles']['linkcolor']}; text-decoration: none; }
+	/*首页*/
+	.box{width:56%;overflow:hidden;margin-top:10px;}
+	.box .box-item{float:left;text-align:center;display:block;text-decoration:none;outline:none;width:77px;height:92px;margin-left:8px;margin-bottom:8px;position:relative;background:rgba(0, 0, 0, 0.7);}
+	.box .box-item i{display:inline-block;width:45px;height:45px;margin-top:15px;font-size:35px;color:#CCC;overflow: hidden;}
+	.box .box-item span{color:{$_W['styles']['fontnavcolor']};display:block;font-size:14px;}
+	/*家园*/
+	.banner{background:url('./themes/mobile/default/images/bg_home.jpg');background-size:cover;height:150px;width:100%;position:relative;}
+	.avatar{position:absolute; z-index:1; width:100px; height:100px; overflow:hidden; border:1px #000 solid; background:#FFF; margin:20px 0 0 20px;}
+	.user{position:absolute; z-index:1; left:140px; top:20px;}
+	.user .username{font-weight:600;color:#FFF;}
+	.user .usergroup{color:#CCC; font-size:14px;}
+	.banner_footer{background:rgba(0, 0, 0, 0.7); width:100%; height:40px; line-height:40px; position:absolute;bottom:0;z-index:0; border-bottom:2px #00AFF0 solid;}
+	.banner_footer div{padding-left:140px; position:relative; margin-top:-2px;}
+	.user-box{width:100%;overflow: hidden;}
+	.user-box .box-item{float:left;text-align:center;display:block;text-decoration:none;outline:none;width:33.28%;height:92px;position:relative;background:#FFF;border-bottom:1px #CCC solid;border-right:1px #CCC solid;}
+	.user-box .box-item i{display:inline-block;width:45px;height:45px;margin-top:15px;font-size:35px;color:#666;}
+	.user-box .box-item span{color:#333;display:block;font-size:12px;}
+	.user-footer .navbar-inner{padding:0 10px;}
+	.user-footer .pull-right button{margin-left:10px;}
+	.user-footer .pull-left button{margin-right:10px;}
+
+	.footer-menu{position:fixed;bottom:10px;left:10px;}
+	.footer-menu .menu-button{color:#00AFF0; background:#FFF; font-size:50px; width:43px; height:43px; position:relative;}
+	.footer-menu .menu-button i{margin-top:-3px; position:absolute;}
+	.footer-menu .menu-main{background:rgba(0, 0, 0, 0.1); padding:2px; display:none; margin-bottom:10px;}
+	.footer-menu .menu-main ul{margin:0; background:#FFF; border:1px #CCC solid; position:relative; overflow:hidden;}
+	.footer-menu .menu-main a{padding:0 10px;text-decoration:none;border-bottom:1px #CCC solid;display:block;height:30px;line-height:30px;position:relative;margin-bottom:-1px; font-size:14px;}
+	.footer-menu .menu-main a i{margin-right:10px; color:#00AFF0;}
+	.footer-menu .menu-main a span{color:#333;}
+
+	.profile{}
+	.profile .nav-tabs{background:#EEE;}
+	.profile .nav-tabs a{color:#333;}
+	.profile .nav-tabs .active{border-top:2px #ed2f2f solid;position:relative;margin-top:-2px;}
+	.profile .nav-tabs .active a{webkit-border-radius:0;-moz-border-radius:0;border-radius:0;margin-right:0;border-right:0;border-left:0;border-top:1px #FFF solid;}
+	.profile .tab-content{padding:0 10px;}
+	.form-table{width:100%;}
+	.form-table th{width:80px; padding-right:20px; text-align:right; color:#666;}
+	.form-table .submit{width:100%;}
+	.form-item{border-left:3px #ED2F2F solid; padding-left:10px; height:30px; line-height:30px; background:#F7F7F7; margin-bottom:10px;}
+	{if $name == 'index'}
+	body {background:url({$_W['styles']['indexbgimg']}); background-size: cover; background-color:{$_W['styles']['indexbgcolor']}; {$_W['styles']['indexbgextra']}; }
+	#footer {bottom:0;}
+	{elseif $name == 'home'}
+	body {background:url({$_W['styles']['homebgimg']}); background-color:{$_W['styles']['homebgcolor']}; {$_W['styles']['homebgextra']}; }
+	{/if}
+	{$_W['styles']['css']}
+	</style>
+</head>
+<body>
