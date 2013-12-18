@@ -122,7 +122,7 @@ $_GPC = array_merge($_GET, $_POST, $_GPC);
 
 unset($config);
 unset($cplen);
-
+echo IA_ROOT;exit;
 defined('IN_SYS') && require IA_ROOT . '/source/bootstarp.sys.inc.php';
 defined('IN_MOBILE') && require IA_ROOT . '/source/bootstarp.mobile.inc.php';
 defined('IN_API') && require IA_ROOT . '/source/bootstarp.api.inc.php';
