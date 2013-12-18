@@ -124,6 +124,7 @@ unset($config);
 unset($cplen);
 defined('IN_SYS') && require IA_ROOT . '/source/bootstarp.sys.inc.php';
 defined('IN_MOBILE') && require IA_ROOT . '/source/bootstarp.mobile.inc.php';
+echo 1;exit;
 defined('IN_API') && require IA_ROOT . '/source/bootstarp.api.inc.php';
 
 echo IA_ROOT;exit;
