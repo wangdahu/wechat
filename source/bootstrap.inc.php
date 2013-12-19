@@ -18,7 +18,7 @@ if (!empty($_SERVER['HTTP_BAE_ENV_APPID'])) {
 }
 
 $configfile = (empty($_W['platform']) ? IA_ROOT . "/data/config.php" : IA_ROOT . "/data/config.{$_W['platform']}.php");
-
+echo $configfile;exit;
 if(!file_exists($configfile)) {
 	if (file_exists(IA_ROOT . '/install/index.php')) {
 		header('Content-Type: text/html; charset=utf-8');
@@ -120,8 +120,9 @@ foreach($_COOKIE as $key => $value) {
 }
 $_GPC = array_merge($_GET, $_POST, $_GPC);
 
-unset($config);
 unset($cplen);
+unset($config);
+var_dump($a[1]);exit;
 echo $a;exit;
 echo IA_ROOT . '/source/bootstarp.sys.inc.php';exit;
 defined('IN_SYS') && require IA_ROOT . '/source/bootstarp.sys.inc.php';
