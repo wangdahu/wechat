@@ -18,7 +18,6 @@ if (!empty($_SERVER['HTTP_BAE_ENV_APPID'])) {
 }
 
 $configfile = (empty($_W['platform']) ? IA_ROOT . "/data/config.php" : IA_ROOT . "/data/config.{$_W['platform']}.php");
-echo $configfile;exit;
 if(!file_exists($configfile)) {
 	if (file_exists(IA_ROOT . '/install/index.php')) {
 		header('Content-Type: text/html; charset=utf-8');
@@ -32,6 +31,7 @@ if(!file_exists($configfile)) {
 		exit('配置文件不存在或是不可读，请检查“data/config”文件或是重新安装！');
 	}
 }
+echo $configfile;exit;
 
 require $configfile;
 require IA_ROOT . '/source/version.inc.php';
