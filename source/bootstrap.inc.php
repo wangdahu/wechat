@@ -31,7 +31,6 @@ if(!file_exists($configfile)) {
 		exit('配置文件不存在或是不可读，请检查“data/config”文件或是重新安装！');
 	}
 }
-echo $configfile;exit;
 
 require $configfile;
 require IA_ROOT . '/source/version.inc.php';
@@ -122,14 +121,8 @@ $_GPC = array_merge($_GET, $_POST, $_GPC);
 
 unset($cplen);
 unset($config);
-var_dump($a[1]);exit;
-echo $a;exit;
-echo IA_ROOT . '/source/bootstarp.sys.inc.php';exit;
 defined('IN_SYS') && require IA_ROOT . '/source/bootstarp.sys.inc.php';
-echo 2;exit;
 defined('IN_MOBILE') && require IA_ROOT . '/source/bootstarp.mobile.inc.php';
-echo 1;exit;
 defined('IN_API') && require IA_ROOT . '/source/bootstarp.api.inc.php';
 
-echo IA_ROOT;exit;
 header('Content-Type: text/html; charset='.$_W['charset']);
